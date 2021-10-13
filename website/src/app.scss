@@ -1,4 +1,3 @@
-/* Write your global styles here, in PostCSS syntax */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -22,19 +21,22 @@ a:not(.nav-link) {
 }
 
 select {
-    @apply bg-green-800 p-2 rounded-md;
+    @apply bg-green-800 py-2 px-4 pr-7 rounded-md;
     appearance: none;
-    position: relative;
+    background-image: url('down.svg');
+    background-repeat: no-repeat;
+    background-position: 95%;
+    background-size: 15px;
 
-    &::after {
-        display: block;
-        position: absolute;
-        right: 10px;
-        top: 0px;
-        bottom: 0px;
-        content: ' ';
-        background-image: url("down.svg");
-        width: 20px;
-        height: 20px;
+    & > option:disabled {
+        @apply bg-green-800 text-gray-800 opacity-40;
+    }
+}
+
+button {
+    @apply bg-green-800 py-2 px-4 rounded-md;
+
+    &:disabled {
+        @apply bg-gray-800 opacity-40;
     }
 }

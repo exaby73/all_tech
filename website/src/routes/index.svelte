@@ -24,8 +24,8 @@
     export let frontends: Tech[];
     export let backends: Tech[];
 
-    let frontend: string;
-    let backend: string;
+    let frontend: string | undefined;
+    let backend: string | undefined;
 
     $: buttonShouldEnable = !!frontend && !!backend;
 
