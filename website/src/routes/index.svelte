@@ -17,8 +17,6 @@
 </script>
 
 <script lang="ts">
-    import { goto } from '$app/navigation';
-
     import type { Tech } from 'src/types';
 
     export let frontends: Tech[];
@@ -35,7 +33,7 @@
         }
 
         const url = `/${frontend}/${backend}`;
-        goto(url);
+        location.href = url;
     }
 </script>
 
