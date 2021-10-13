@@ -1,0 +1,11 @@
+{
+  "name": "all_tech",
+  "version": "1.0.0",
+  "repository": "https://github.com/exaby73/all_tech.git",
+  "author": "Nabeel Parkar <nabeelparkar99@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build:landing": "cd website ; yarn build",
+    "build:all": "yarn build:landing"
+  }
+}
