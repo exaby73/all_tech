@@ -1,0 +1,40 @@
+/* Write your global styles here, in PostCSS syntax */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.display {
+    font-family: 'Noto Sans Display', sans-serif;
+}
+
+a:not(.nav-link) {
+    @apply text-blue-700;
+}
+
+.container {
+    @apply max-w-6xl m-auto py-6 px-5;
+}
+
+select {
+    @apply bg-green-800 p-2 rounded-md;
+    appearance: none;
+    position: relative;
+
+    &::after {
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 0px;
+        bottom: 0px;
+        content: ' ';
+        background-image: url("down.svg");
+        width: 20px;
+        height: 20px;
+    }
+}
